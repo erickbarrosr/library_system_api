@@ -1,0 +1,22 @@
+{
+  "name": "express-mongo-api",
+  "version": "1.0.0",
+  "description": "API with Express.js and MongoDB",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon server.js"
+  },
+  "author": "ERICK BARROS REZENDE",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
