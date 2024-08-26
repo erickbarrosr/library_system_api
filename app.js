@@ -1,5 +1,6 @@
 import express from "express";
 import connectToDatabase from "./src/config/connectDb.js";
+import initializeRoutes from "./src/routes/router.js";
 
 const dbConnection = await connectToDatabase();
 
@@ -14,5 +15,7 @@ dbConnection.once("open", () => {
 });
 
 const app = express();
+
+initializeRoutes(app);
 
 export default app;
