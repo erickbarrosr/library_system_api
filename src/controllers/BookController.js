@@ -4,9 +4,9 @@ import Livro from "../models/Book.js";
 class BookController {
   static async registerBook(req, res) {
     try {
-      const body = req.body;
+      const book = new Book(req.body);
 
-      const newBook = await Livro.create(body);
+      const newBook = await book.save();
 
       res.status(201).json({ message: "Livro criado com sucesso!", newBook });
     } catch (error) {
